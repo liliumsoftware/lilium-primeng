@@ -1,0 +1,1089 @@
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam-WOL.eot');
+  src: url('../fonts/Shabnam-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Shabnam-WOL.woff2') format('woff2'),
+  url('../fonts/Shabnam-WOL.woff') format('woff'),
+  url('../fonts/Shabnam-WOL.ttf') format('truetype');
+  font-feature-settings: "tnum";
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam-Bold-WOL.eot');
+  src: url('../fonts/Shabnam-Bold-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Shabnam-Bold-WOL.woff2') format('woff2'),
+  url('../fonts/Shabnam-Bold-WOL.woff') format('woff'),
+  url('../fonts/Shabnam-Bold-WOL.ttf') format('truetype');
+  font-feature-settings: "tnum";
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam-Light-WOL.eot');
+  src: url('../fonts/Shabnam-Light-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Shabnam-Light-WOL.woff2') format('woff2'),
+  url('../fonts/Shabnam-Light-WOL.woff') format('woff'),
+  url('../fonts/Shabnam-Light-WOL.ttf') format('truetype');
+  font-feature-settings: "tnum";
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Samim;
+  src: url('../fonts/Samim-WOL.eot');
+  src: url('../fonts/Samim-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Samim-WOL.woff') format('woff'),
+  url('../fonts/Samim-WOL.woff2') format('woff2'),
+  url('../fonts/Samim-WOL.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Samim;
+  src: url('../fonts/Samim-Bold-WOL.eot');
+  src: url('../fonts/Samim-Bold-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Samim-Bold-WOL.woff2') format('woff2'),
+  url('../fonts/Samim-Bold-WOL.woff') format('woff'),
+  url('../fonts/Samim-Bold-WOL.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir-WOL.eot');
+  src: url('../fonts/Vazir-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vazir-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir-WOL.woff') format('woff'),
+  url('../fonts/Vazir-WOL.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir-Bold-WOL.eot');
+  src: url('../fonts/Vazir-Bold-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vazir-Bold-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir-Bold-WOL.woff') format('woff'),
+  url('../fonts/Vazir-Bold-WOL.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir-Light-WOL.eot');
+  src: url('../fonts/Vazir-Light-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vazir-Light-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir-Light-WOL.woff') format('woff'),
+  url('../fonts/Vazir-Light-WOL.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir-Medium-WOL.eot');
+  src: url('../fonts/Vazir-Medium-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vazir-Medium-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir-Medium-WOL.woff') format('woff'),
+  url('../fonts/Vazir-Medium-WOL.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir-Thin-WOL.eot');
+  src: url('../fonts/Vazir-Thin-WOL.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vazir-Thin-WOL.woff2') format('woff2'),
+  url('../fonts/Vazir-Thin-WOL.woff') format('woff'),
+  url('../fonts/Vazir-Thin-WOL.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: VazirCode;
+  src: url('../fonts/Vazir-Code.eot');
+  src: url('../fonts/Vazir-Code.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Vazir-Code.woff') format('woff'),
+  url('../fonts/Vazir-Code.ttf') format('truetype');
+  font-weight: normal;
+}
+
+* {
+  font-family: Vazir, $fontFamily;
+  font-size: 13px;
+}
+
+@mixin hover-element() {
+    border-color: $stateHoverBorderColor;
+    background: $stateHoverBgColor;
+    color: $stateHoverTextColor;
+
+    a {
+        color: $stateHoverTextColor;
+    }
+}
+
+@mixin icon-override($icon) {
+    background: none !important;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-indent: 0px !important;
+    text-align: center;
+
+    &:before {
+        content: $icon;
+    }
+}
+
+.ui-widget {
+    font-family: Vazir, $fontFamily;
+    font-size: $fontSize;
+
+    input, select, textarea, button {
+        font-family: Vazir, $fontFamily;
+        font-size: $fontSize;
+    }
+
+    :active {
+        outline: none;
+    }
+}
+
+.ui-widget-content {
+    border: $contentBorderWidth solid $contentBorderColor;
+    background: $contentBgColor;
+    color: $contentTextColor;
+
+    a {
+        color: $contentTextColor;
+    }
+}
+
+.ui-widget-header {
+    border: $headerBorderWidth solid $headerBorderColor;
+    background: $headerBgColor;
+    color: $headerTextColor;
+    font-weight: $headerFontWeight;
+
+    a {
+        color: $headerTextColor;
+    }
+}
+
+.ui-widget-overlay {
+    background: #666666;
+    opacity: .50;
+    filter:Alpha(Opacity=50);
+}
+
+.ui-state-default {
+    border: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+    background: $stateDefaultBgColor;
+    color: $stateDefaultTextColor;
+
+    a {
+        color: $stateDefaultTextColor ;
+    }
+}
+
+.ui-state-active {
+    border-color: $stateActiveBorderColor;
+    background: $stateActiveBgColor;
+    color: $stateActiveTextColor;
+
+    a {
+        color: $stateActiveTextColor;
+    }
+}
+
+.ui-state-highlight  {
+    border-color: $stateHighlightBorderColor;
+    background: $stateHighlightBgColor;
+    color: $stateHighlightTextColor;
+
+    a {
+        color: $stateHighlightTextColor;
+    }
+}
+
+.ui-state-focus {
+    border-color: $stateFocusBorderColor;
+    background: $stateFocusBgColor;
+    color: $stateFocusTextColor;
+
+    a {
+        color: $stateFocusTextColor;
+    }
+}
+
+.ui-state-error {
+    border-color: $stateErrorBorderColor;
+    background: $stateErrorBgColor;
+    color: $stateErrorTextColor;
+
+    a {
+        color: $stateErrorTextColor;
+    }
+}
+
+.ui-state-disabled,
+.ui-widget:disabled {
+    opacity: $disabledOpacity;
+    filter: Alpha(Opacity= $disabledOpacity * 100);
+    background-image: none;
+    cursor: default !important;
+
+    * {
+        cursor: default !important;
+    }
+}
+
+/* Forms */
+.ui-inputtext {
+    background: $inputBgColor;
+    color: $inputTextColor;
+}
+
+.ui-inputtext:enabled:hover {
+    border-color: $stateHoverBorderColor;
+}
+
+.ui-inputtext.ui-state-focus,
+.ui-inputtext:focus {
+    outline: 0 none;
+    border-color: $stateFocusBorderColor;
+    -moz-box-shadow: 0px 0px 5px $stateFocusBorderColor;
+    -webkit-box-shadow: 0px 0px 5px $stateFocusBorderColor;
+    box-shadow: 0px 0px 5px $stateFocusBorderColor;
+}
+
+.ui-inputgroup > {
+    .ui-inputgroup-addon  {
+        border-color: $stateDefaultBorderColor;
+        background-color: lighten($stateDefaultBorderColor, 10%);
+        color: $inputGroupTextColor;
+
+        &:first-child {
+            border-top-left-radius: $borderRadius;
+            border-bottom-left-radius: $borderRadius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+        }
+    }
+
+    .ui-button {
+        &:first-child {
+            border-top-left-radius: $borderRadius;
+            border-bottom-left-radius: $borderRadius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+        }
+    }
+}
+
+.ui-float-label input.ng-dirty.ng-invalid ~ label {
+    color: $stateErrorTextColor;
+}
+
+.ui-autocomplete {
+    .ui-autocomplete-multiple-container:not(.ui-state-disabled) {
+        &:hover {
+            border-color: $stateHoverBorderColor;
+        }
+
+        &.ui-state-focus {
+            border-color: $stateFocusBorderColor;
+
+        }
+    }
+}
+
+.ui-chips {
+    > ul:not(.ui-state-disabled) {
+        &:hover {
+            border-color: $stateHoverBorderColor;
+        }
+
+        &.ui-state-focus {
+            border-color: $stateFocusBorderColor;
+        }
+    }
+}
+
+.ui-button:focus,
+.ui-button:enabled:hover,
+.ui-fileupload-choose:not(.ui-state-disabled):hover {
+    outline: 0 none;
+    @include hover-element();
+}
+
+.ui-button:enabled:active,
+.ui-fileupload-choose:not(.ui-state-disabled):active {
+    border-color: $stateActiveBorderColor;
+    background: $stateActiveBgColor;
+    color: $stateActiveTextColor;
+}
+
+.ui-chkbox-box:not(.ui-state-disabled):not(.ui-state-active):hover {
+    @include hover-element();
+}
+
+.ui-radiobutton-box:not(.ui-state-disabled):not(.ui-state-active):hover {
+    @include hover-element();
+}
+
+.ui-dropdown:not(.ui-state-disabled):hover {
+    @include hover-element();
+}
+
+.ui-dropdown-panel .ui-dropdown-item:not(.ui-state-highlight):hover {
+    @include hover-element();
+}
+
+.ui-listbox {
+    .ui-listbox-header {
+        .ui-listbox-filter-container {
+            .fa {
+                color: $inputTextColor;
+            }
+        }
+    }
+
+    &:not(.ui-state-disabled) {
+        .ui-listbox-item:not(.ui-state-highlight):hover {
+            @include hover-element();
+        }
+    }
+
+    &.ui-state-disabled {
+        .ui-chkbox-box:not(.ui-state-active):hover {
+            border-color: $stateDefaultBorderColor;
+            background: $stateDefaultBgColor;
+            color: $stateDefaultTextColor;
+        }
+    }
+}
+
+.ui-multiselect:not(.ui-state-disabled):hover {
+    @include hover-element();
+}
+
+.ui-multiselect-panel .ui-multiselect-item:not(.ui-state-highlight):hover {
+    @include hover-element();
+}
+
+.ui-multiselect-panel .ui-multiselect-close {
+    color: $headerIconTextColor;
+}
+
+.ui-multiselect-panel .ui-multiselect-filter-container .fa {
+    color: $inputTextColor;
+}
+
+.ui-spinner:not(.ui-state-disabled) .ui-spinner-button:enabled:hover {
+    @include hover-element();
+}
+
+.ui-spinner:not(.ui-state-disabled) .ui-spinner-button:enabled:active {
+    border-color: $stateActiveBorderColor;
+    background: $stateActiveBgColor;
+    color: $stateActiveTextColor;
+}
+
+.ui-selectbutton .ui-button:not(.ui-state-disabled):not(.ui-state-active):hover {
+    @include hover-element();
+}
+
+.ui-togglebutton:not(.ui-state-disabled):not(.ui-state-active):hover {
+    @include hover-element();
+}
+
+.ui-paginator a:not(.ui-state-disabled):not(.ui-state-active):hover {
+    @include hover-element();
+}
+
+.ui-paginator a {
+    color: $stateDefaultTextColor;
+}
+
+.ui-datatable {
+    .ui-rowgroup-header a {
+        color: $headerTextColor;
+    }
+
+    .ui-sortable-column:not(.ui-state-active):hover {
+        background: $stateHoverBgColor;
+        color: $stateHoverTextColor;
+    }
+
+    .ui-row-toggler {
+        color: $contentTextColor;
+    }
+
+    tbody.ui-datatable-hoverable-rows {
+        > tr.ui-widget-content:not(.ui-state-highlight):hover {
+            cursor: pointer;
+            background: $stateHoverBgColor;
+            color: $stateHoverTextColor;
+        }
+    }
+}
+
+.ui-orderlist {
+    .ui-orderlist-item:not(.ui-state-highlight):hover {
+        @include hover-element();
+    }
+}
+
+.ui-picklist {
+    .ui-picklist-item:not(.ui-state-disabled):not(.ui-state-highlight):hover {
+        @include hover-element();
+    }
+
+    .ui-picklist-droppoint-highlight {
+        border-color: $stateHighlightBorderColor;
+        background: $stateHighlightBgColor;
+        color: darken($contentTextColor,1%);
+
+        a {
+            color: darken($contentTextColor,1%);
+        }
+    }
+
+    .ui-picklist-highlight {
+        border-color: $stateHighlightBorderColor;
+        color: darken($contentTextColor,1%);
+
+        a {
+            color: darken($contentTextColor,1%);
+        }
+    }
+}
+
+.ui-tree {
+    &.ui-treenode-dragover {
+        border-color: $stateHighlightBorderColor;
+    }
+
+    .ui-treenode-content {
+        &.ui-treenode-selectable {
+            .ui-treenode-label:not(.ui-state-highlight):hover {
+                @include hover-element();
+            }
+        }
+
+        &.ui-treenode-dragover {
+            background: $stateActiveBgColor;
+            color: $stateActiveTextColor;
+        }
+    }
+
+    &.ui-tree-horizontal {
+        .ui-treenode-content.ui-treenode-selectable {
+            .ui-treenode-label:not(.ui-state-highlight):hover {
+                background-color: inherit;
+                color: inherit;
+            }
+
+            &:not(.ui-state-highlight):hover {
+                @include hover-element();
+            }
+        }
+    }
+}
+
+.ui-treetable {
+    .ui-treetable-row.ui-treetable-row-selectable:not(.ui-state-highlight):hover {
+        background: $stateHoverBgColor;
+        color: $stateHoverTextColor;
+    }
+}
+
+.ui-organizationchart {
+    .ui-organizationchart-node-content {
+        &.ui-organizationchart-selectable-node:not(.ui-state-highlight):hover {
+            @include hover-element();
+        }
+    }
+}
+
+.ui-accordion {
+    .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled):hover {
+        @include hover-element();
+    }
+}
+
+.ui-fieldset {
+    &.ui-fieldset-toggleable {
+        .ui-fieldset-legend:hover {
+            @include hover-element();
+        }
+    }
+}
+
+.ui-panel {
+    .ui-panel-titlebar {
+        .ui-panel-titlebar-icon:hover {
+            @include hover-element();
+        }
+    }
+}
+
+.ui-tabview {
+    .ui-tabview-nav {
+        li {
+            &:not(.ui-state-active):not(.ui-state-disabled):hover {
+                @include hover-element();
+            }
+        }
+    }
+}
+
+.ui-dialog {
+    .ui-dialog-titlebar-icon {
+        color: $headerTextColor;
+
+        &:hover {
+            @include hover-element();
+        }
+    }
+}
+
+.ui-sidebar {
+    .ui-sidebar-close {
+        color: $headerTextColor;
+
+        &:hover {
+            @include hover-element();
+        }
+    }
+}
+
+.ui-overlaypanel {
+    .ui-overlaypanel-close:hover {
+        @include hover-element();
+    }
+}
+
+.ui-inplace {
+    .ui-inplace-display:hover {
+        @include hover-element();
+    }
+}
+
+.ui-breadcrumb {
+    a {
+        color: $headerTextColor;
+    }
+}
+
+.ui-menu {
+    .ui-menuitem {
+        .ui-menuitem-link {
+            color: $contentTextColor;
+
+            &:hover {
+                @include hover-element();
+                border-color: transparent;
+            }
+        }
+
+        &.ui-menuitem-active {
+            > .ui-menuitem-link {
+                @include hover-element();
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.ui-tabmenu {
+    .ui-tabmenu-nav {
+        li:not(.ui-state-active):hover {
+            @include hover-element();
+        }
+    }
+}
+
+.ui-steps {
+    .ui-steps-item:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+        @include hover-element();
+    }
+}
+
+.ui-panelmenu {
+    .ui-panelmenu-header {
+        &:not(.ui-state-active):hover {
+            @include hover-element();
+            border-color: $stateDefaultBorderColor;
+
+            a {
+                color: $stateHoverTextColor;
+            }
+        }
+
+        &.ui-state-active {
+            a {
+                color: $stateActiveTextColor;
+            }
+        }
+    }
+
+    .ui-panelmenu-content {
+        .ui-menuitem-link {
+            color: $contentTextColor;
+
+            &:hover {
+                @include hover-element();
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.ui-datepicker {
+    .ui-datepicker-header {
+        a {
+            color: $headerTextColor;
+
+            &:hover {
+                @include hover-element();
+            }
+        }
+    }
+
+    .ui-datepicker-calendar {
+        td:not(.ui-state-disabled) {
+            a:hover {
+                @include hover-element();
+            }
+        }
+    }
+}
+
+.fc {
+    .fc-toolbar {
+        .fc-prev-button {
+            .ui-icon-circle-triangle-w {
+                margin-top: .3em;
+                @include icon_override("\f053");
+            }
+        }
+
+        .fc-next-button {
+            .ui-icon-circle-triangle-e {
+                margin-top: .3em;
+                @include icon_override("\f054");
+            }
+        }
+    }
+}
+
+.ui-rating {
+    a {
+        color: $inputTextColor;
+    }
+}
+
+.ui-organizationchart {
+    .ui-organizationchart-line-down {
+        background-color: darken($contentBorderColor, 10%);
+    }
+
+    .ui-organizationchart-line-left {
+        border-right: 1px solid darken($contentBorderColor, 10%);
+    }
+
+    .ui-organizationchart-line-right {
+
+    }
+
+    .ui-organizationchart-line-top {
+        border-top: 1px solid darken($contentBorderColor, 10%);
+    }
+
+    .ui-organizationchart-node-content {
+        border-color: darken($contentBorderColor, 10%);
+    }
+
+    .ui-organizationchart-node-content .ui-node-toggler {
+        color: darken($contentBorderColor, 10%);
+    }
+}
+
+/* Validation */
+.ui-inputtext.ng-dirty.ng-invalid,
+p-dropdown.ng-dirty.ng-invalid > .ui-dropdown,
+p-autocomplete.ng-dirty.ng-invalid > .ui-autocomplete > .ui-inputtext,
+p-calendar.ng-dirty.ng-invalid > .ui-calendar > .ui-inputtext,
+p-chips.ng-dirty.ng-invalid > .ui-inputtext,
+p-inputmask.ng-dirty.ng-invalid > .ui-inputtext,
+p-checkbox.ng-dirty.ng-invalid .ui-chkbox-box,
+p-radiobutton.ng-dirty.ng-invalid .ui-radiobutton-box,
+p-inputswitch.ng-dirty.ng-invalid .ui-inputswitch,
+p-listbox.ng-dirty.ng-invalid .ui-inputtext,
+p-multiselect.ng-dirty.ng-invalid > .ui-multiselect,
+p-spinner.ng-dirty.ng-invalid > .ui-inputtext,
+p-selectbutton.ng-dirty.ng-invalid .ui-button,
+p-togglebutton.ng-dirty.ng-invalid .ui-button {
+    border-bottom-color: $invalidInputBorderColor;
+}
+
+/* Cornering */
+.ui-corner-tl { -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius; }
+.ui-corner-tr { -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius; }
+.ui-corner-bl { -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius; }
+.ui-corner-br { -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius; }
+.ui-corner-top { -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius; -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius; -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius; }
+.ui-corner-right {  -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius; -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius; }
+.ui-corner-left { -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius; -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius; }
+.ui-corner-all { -moz-border-radius: $borderRadius; -webkit-border-radius: $borderRadius; border-radius: $borderRadius; }
+
+.ui-inputgroup > .ui-inputtext:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0 none;
+}
+
+.ui-inputgroup > .ui-inputtext:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0 none;
+}
+
+/* RTL */
+.ui-rtl .ui-calendar button {
+  border-top-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-left: initial;
+  border-right: 0 none;
+}
+
+.ui-rtl .ui-calendar.ui-calendar-w-btn input {
+  -moz-border-radius-topright: $borderRadius;
+  -webkit-border-top-right-radius: $borderRadius;
+  -khtml-border-top-right-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+  -moz-border-radius-bottomright: $borderRadius;
+  -webkit-border-bottom-right-radius: $borderRadius;
+  -khtml-border-bottom-right-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -khtml-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -khtml-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.ui-rtl .ui-autocomplete-dd input.ui-corner-all,
+.ui-autocomplete-dd .ui-autocomplete-multiple-container.ui-corner-all {
+  -moz-border-radius-topright: $borderRadius;
+  -webkit-border-top-right-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+  -moz-border-radius-bottomright: $borderRadius;
+  -webkit-border-bottom-right-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.ui-rtl .ui-autocomplete-dd .ui-autocomplete-dropdown.ui-corner-all {
+  -moz-border-radius-topleft: $borderRadius;
+  -webkit-border-top-left-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+  -moz-border-radius-bottomleft: $borderRadius;
+  -webkit-border-bottom-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.ui-rtl .ui-inputgroup .ui-inputgroup-addon + .ui-inputgroup-addon {
+  border-left: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+  border-right: 0 none;
+}
+
+.ui-rtl .ui-inputgroup > .ui-inputtext:not(:first-child) {
+  border-top-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+  border-left: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0 none;
+}
+
+.ui-rtl .ui-inputgroup > .ui-inputtext:not(:last-child) {
+  border-top-right-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+  border-right: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0 none;
+}
+
+.ui-rtl .ui-inputgroup > .ui-inputtext:not(:first-child):not(:last-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+.ui-rtl .ui-inputgroup > {
+  .ui-inputgroup-addon  {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+    }
+  }
+
+  .ui-button {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+    }
+  }
+}
+
+.ui-rtl .ui-corner-tl {
+  -moz-border-radius-topleft: initial; -webkit-border-top-left-radius: initial; border-top-left-radius: initial;
+  -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius;
+}
+
+.ui-rtl .ui-corner-tr {
+  -moz-border-radius-topright: initial; -webkit-border-top-right-radius: initial; border-top-right-radius: initial;
+  -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius;
+}
+
+.ui-rtl .ui-corner-bl {
+  -moz-border-radius-bottomleft: initial; -webkit-border-bottom-left-radius: initial; border-bottom-left-radius: initial;
+  -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius;
+}
+
+.ui-rtl .ui-corner-br {
+  -moz-border-radius-bottomright: initial; -webkit-border-bottom-right-radius: initial; border-bottom-right-radius: initial;
+  -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius;
+}
+
+.ui-rtl .ui-corner-right {
+  -moz-border-radius-topright: initial; -webkit-border-top-right-radius: initial; border-top-right-radius: initial; -moz-border-radius-bottomright: initial; -webkit-border-bottom-right-radius: initial; border-bottom-right-radius: initial;
+  -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius; -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius;
+}
+.ui-rtl .ui-corner-left {
+  -moz-border-radius-topleft: initial; -webkit-border-top-left-radius: initial; border-top-left-radius: initial; -moz-border-radius-bottomleft: initial; -webkit-border-bottom-left-radius: initial; border-bottom-left-radius: initial;
+  -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius; -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius;
+}
+
+.ui-rtl .ui-organizationchart {
+  .ui-organizationchart-line-left {
+    border-right: initial;
+    border-left: 1px solid darken($contentBorderColor, 10%);
+  }
+}
+
+/* LTR */
+.ui-rtl .ui-ltr .ui-calendar button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+  border-left: 0 none;
+  border-right: initial;
+}
+
+.ui-rtl .ui-ltr .ui-calendar.ui-calendar-w-btn input {
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -khtml-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -khtml-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -moz-border-radius-topleft: $borderRadius;
+  -webkit-border-top-left-radius: $borderRadius;
+  -khtml-border-top-left-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+  -moz-border-radius-bottomleft: $borderRadius;
+  -webkit-border-bottom-left-radius: $borderRadius;
+  -khtml-border-bottom-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+}
+
+.ui-rtl .ui-ltr .ui-autocomplete-dd input.ui-corner-all,
+.ui-rtl .ui-ltr .ui-autocomplete-dd .ui-autocomplete-multiple-container.ui-corner-all {
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -moz-border-radius-topleft: $borderRadius;
+  -webkit-border-top-left-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+  -moz-border-radius-bottomleft: $borderRadius;
+  -webkit-border-bottom-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+}
+
+.ui-rtl .ui-ltr .ui-autocomplete-dd .ui-autocomplete-dropdown.ui-corner-all {
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-topright: $borderRadius;
+  -webkit-border-top-right-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+  -moz-border-radius-bottomright: $borderRadius;
+  -webkit-border-bottom-right-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+}
+
+.ui-rtl .ui-ltr .ui-inputgroup .ui-inputgroup-addon + .ui-inputgroup-addon {
+  border-left: 0 none;
+  border-right: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+}
+
+.ui-rtl .ui-ltr .ui-inputgroup > .ui-inputtext:not(:first-child) {
+  border-top-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+  border-left: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0 none;
+}
+
+.ui-rtl .ui-ltr .ui-inputgroup > .ui-inputtext:not(:last-child) {
+  border-top-right-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+  border-right: $stateDefaultBorderWidth solid $stateDefaultBorderColor;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0 none;
+}
+
+.ui-rtl .ui-ltr .ui-inputgroup > .ui-inputtext:not(:first-child):not(:last-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+.ui-rtl .ui-ltr .ui-inputgroup > {
+  .ui-inputgroup-addon  {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+    }
+  }
+
+  .ui-button {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+    }
+  }
+}
+
+.ui-rtl .ui-ltr .ui-corner-tl {
+  -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius;
+  -moz-border-radius-topright: initial; -webkit-border-top-right-radius: initial; border-top-right-radius: initial;
+}
+
+.ui-rtl .ui-ltr .ui-corner-tr {
+  -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius;
+  -moz-border-radius-topleft: initial; -webkit-border-top-left-radius: initial; border-top-left-radius: initial;
+}
+
+.ui-rtl .ui-ltr .ui-corner-bl {
+  -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius;
+  -moz-border-radius-bottomright: initial; -webkit-border-bottom-right-radius: initial; border-bottom-right-radius: initial;
+}
+
+.ui-rtl .ui-ltr .ui-corner-br {
+  -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius;
+  -moz-border-radius-bottomleft: initial; -webkit-border-bottom-left-radius: initial; border-bottom-left-radius: initial;
+}
+
+.ui-rtl .ui-ltr .ui-corner-right {
+  -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius; -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius;
+  -moz-border-radius-topleft: initial; -webkit-border-top-left-radius: initial; border-top-left-radius: initial; -moz-border-radius-bottomleft: initial; -webkit-border-bottom-left-radius: initial; border-bottom-left-radius: initial;
+}
+.ui-rtl .ui-ltr .ui-corner-left {
+  -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius; -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius;
+  -moz-border-radius-topright: initial; -webkit-border-top-right-radius: initial; border-top-right-radius: initial; -moz-border-radius-bottomright: initial; -webkit-border-bottom-right-radius: initial; border-bottom-right-radius: initial;
+}
+
+.ui-rtl .ui-ltr .ui-organizationchart {
+  .ui-organizationchart-line-left {
+    border-right: 1px solid darken($contentBorderColor, 10%);
+    border-left: initial;
+  }
+}
